@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
   state = {
-    count: 0,
-    tags: []
+    count: 0
   };
 
   handleIncrement = product => {
@@ -13,7 +12,7 @@ class Counter extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           onClick={() => this.handleIncrement({ id: 1 })} //<-the hard coded object is an example. If we have a product object we may use -> product.id
@@ -21,13 +20,7 @@ class Counter extends Component {
         >
           Increment
         </button>
-        <ul>
-          {this.state.tags.length === 0 && 'Please add a new tag.'}
-          {this.state.tags.map(tag => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
-      </React.Fragment>
+      </div>
     );
   }
 
