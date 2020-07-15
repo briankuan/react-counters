@@ -1,11 +1,15 @@
 import React from 'react';
-import './styles.css';
+import NavBar from './components/navbar';
+import Counters from './components/counters';
+import './App.css';
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <React.Fragment>
+      <NavBar />
+      <main className="container">
+        <Counters />
+      </main>
+    </React.Fragment>
   );
 }
